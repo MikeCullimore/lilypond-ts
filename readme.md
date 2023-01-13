@@ -7,6 +7,7 @@ Lilypond scripts in TypeScript. Goal: generate piano scale sheet music images.
 Make changes to `src/index.ts` then run with `npm run start`.
 
 * Call Lilypond with (existing?) `*.ly` script.
+* Optimise SVG e.g. with [svgo](https://www.npmjs.com/package/svgo).
 
 ## How to set up a Node.js + TypeScript project
 
