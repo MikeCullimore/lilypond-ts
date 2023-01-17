@@ -2,38 +2,34 @@
 % Grade 2
 % G major, two octaves, hands together.
 
-% todo
-% Fingering (how to automate?).
-% Import common by absolute path or inject directly?
-
 \version "2.22.2"
 
 \include "common.ly"
 
 common = {
     \key g \major
+    % TODO: move the following into common config.
     \omit Staff.TimeSignature
-    % \omit Staff.BarLine % Leaves bar lines between staffs.
     \override Staff.BarLine.break-visibility = ##(#f #f #f)
 }
 
 right = \relative {
     \common
     \clef treble
-    g8 a b c d e fis
-    g a b c d e fis
-    g fis e d c b a
-    g fis e d c b a
-    g4
+    g8-1 a b-3 c-1 d e fis-4
+    g-1 a b-3 c-1 d e fis-4
+    g-5 fis-4 e d c-1 b-3 a
+    g-1 fis-4 e d c-1 b-3 a
+    g4-1
 }
 
 left = \relative {
     \common
     \clef bass
-    g,8 a b c d e fis
-    g a b c d e fis
-    g fis e d c b a
-    g fis e d c b a
+    g,8-5 a b c d-1 e-3 fis
+    g-1 a-4 b c d-1 e-3 fis
+    g-1 fis e-3 d-1 c b a-4
+    g-1 fis e-3 d-1 c b a
     g4
 }
 
